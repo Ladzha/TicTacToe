@@ -1,31 +1,151 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+
+:root{
+  /* --main-color: #07A0C3; */
+  --main-color: #6d09f0;
+  --text-color: #FEFAEC;
+  --x-color: #F0C808;
+  --o-color: #FFF1D0;
+  --win-color: #DD1C1A;
+}
+
+body{
+  background-color: var(--main-color);
+  color: var(--text-color);
   text-align: center;
+  font-family: 'Lexend';
+  letter-spacing: 0.1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button{
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+  align-items: center;
+  gap:1rem;
+  padding-top: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.title{
+  font-family: "Luckiest Guy", cursive;
+  letter-spacing: 0.25rem;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3rem, 3.5rem)
+}
+
+.game-info{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  padding-bottom: 0.2rem;
+}
+
+.turn{
+  font-size: 1.6rem;
+}
+
+.board{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.game-board{
+  width: clamp(150px, 300px, 350px);
+  height: clamp(150px, 300px, 350px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.cell{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-size: 6rem;
+  /* border-top: 5px solid rgba(0, 0, 0, 0.1); */
+  /* border-bottom: 5px solid var(--text-color); */
+
+  border: 5px solid var(--text-color);
+
+  border-radius: 2rem;
+  margin: 0.2rem;
+  padding-bottom: 0.2rem;
+  box-shadow: 5px 5px rgb(0, 0, 0, 0.2);
+
+}
+
+.symbol{
+  font-family: "Quicksand", sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+.symbol-x{
+  color: var(--x-color);
+}
+
+.symbol-o{
+  color: var(--o-color);
+}
+
+.win{
+  background-color: var(--win-color);
+}
+
+.button{
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  padding: 1rem 0rem;
+  border: 5px solid var(--text-color);
+  border-radius: 2rem;
+  box-shadow: 5px 5px rgb(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.button:hover, .cell:hover{
+  background-color: rgba(255,255,255, 0.15);
+
+}
+
+.player-cart-container{
+  border: 1px solid black;
+}
+
+.test{
+  position: absolute;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  color: var(--x-color)
+
+  /* left: 15rem;
+  top: 15rem; */
 }
 
 @keyframes App-logo-spin {
