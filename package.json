@@ -1,6 +1,7 @@
 {
   "name": "xo",
   "version": "0.1.0",
+  // "homepage": "https://ladzha.github.io/TicTacToe",
   "private": true,
   "dependencies": {
     "@iconscout/react-unicons": "^2.0.2",
@@ -35,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }

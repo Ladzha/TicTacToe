@@ -1,14 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
-
 :root{
-  /* --main-color: #07A0C3; */
   --main-color: #6d09f0;
   --text-color: #FEFAEC;
   --x-color: #F0C808;
@@ -32,8 +26,9 @@ button{
   cursor: pointer;
 }
 
-h1{
+h1,h2,p,span{
   margin: 0;
+  padding: 0;
 }
 
 .game{
@@ -56,13 +51,8 @@ h1{
 .game-info{
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 0;
   text-transform: uppercase;
   padding-bottom: 0.2rem;
-}
-
-.turn{
-  font-size: 1.6rem;
 }
 
 .board{
@@ -78,29 +68,29 @@ h1{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: stretch;
+  align-items: stretch;
 }
 
 .cell{
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   font-size: 6rem;
-  /* border-top: 5px solid rgba(0, 0, 0, 0.1); */
-  /* border-bottom: 5px solid var(--text-color); */
-
   border: 5px solid var(--text-color);
-
   border-radius: 2rem;
   margin: 0.2rem;
   padding-bottom: 0.2rem;
   box-shadow: 5px 5px rgb(0, 0, 0, 0.2);
-
 }
 
 .symbol{
   font-family: "Quicksand", sans-serif;
   font-weight: 900;
   font-size: 4rem;
+  margin-top: -10%;
+  margin-right: -1%;
 }
 
 .symbol-x{
@@ -120,39 +110,15 @@ h1{
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
-
   padding: 1rem 0rem;
   border: 5px solid var(--text-color);
   border-radius: 2rem;
   box-shadow: 5px 5px rgb(0, 0, 0, 0.2);
   width: 100%;
+  transition: transform 0.3s ease;
 }
 
-.button:hover, .cell:hover{
+.button:hover{
   background-color: rgba(255,255,255, 0.15);
-
-}
-
-.player-cart-container{
-  border: 1px solid black;
-}
-
-.test{
-  position: absolute;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 900;
-  font-size: 4rem;
-  color: var(--x-color)
-
-  /* left: 15rem;
-  top: 15rem; */
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  transform: scale(1.02)
 }
